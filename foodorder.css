@@ -1,0 +1,326 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
+}
+:root {
+  --tran: all 0.5s linear;
+}
+html {
+  scroll-behavior: smooth;
+}
+#nav-design {
+  
+  top: 0px;
+  /* border : 10px solid red; */
+  border-top: 20px solid #464141;
+  border-bottom: 20px solid #464141;
+  margin: 0px;
+  padding: 16px;
+  display: flex;
+  background-color: black;
+  cursor: pointer;
+
+  opacity: 0.89;
+  z-index: -1;
+}
+
+#sec-nav {
+  position: sticky;
+  padding: 10px;
+  margin: 0px;
+  font-size: 2.8rem;
+  padding: 0px;
+  /* background-color: #beab3cf3; */
+  border-bottom: 20px solid #574734;
+  background: rgb(165, 118, 42);
+}
+#sec-nav h1 {
+  font-size: 20px;
+  color: whitesmoke;
+  margin-bottom: 20px;
+  font-size: 4.3rem;
+  text-align: left;
+  font-family: "Hachi Maru Pop", cursive;
+  font-family: "Lobster", cursive;
+
+  /* font-family: 'Hachi Maru Pop', cursive; */
+}
+.info {
+  /* position: sticky; */
+  font-size: 1.3rem;
+  margin-left: 5%;
+  margin-top: 0%;
+  font-size: 2.8rem;
+  text-align: left;
+  font-family: "Potta One", cursive;
+}
+.info a {
+  background: black;
+  padding: 10px 18px;
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  margin: 30px 0px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.info a:hover {
+  background: red;
+}
+
+/* #img{
+    height: 100%;
+    position: relative;
+   align-self: start;
+  
+  } */
+#nav-items ul {
+  text-align: center;
+  display: flex;
+  font-family: "Coda Caption", sans-serif;
+  font-family: "Potta One", cursive;
+  position: sticky;
+}
+#nav-items ul li {
+  list-style: none;
+  font-size: 1.4rem;
+}
+#nav-items ul li a {
+  color: rgb(165, 118, 42);
+  display: block;
+  padding: 3px 22px;
+  border-radius: 20px;
+  text-decoration: none;
+}
+#nav-items ul li a:hover {
+  border-top: 5px solid blue;
+  border-bottom: 5px solid red;
+  color: red;
+  background-color: black;
+}
+
+.colorchange {
+  animation: colorchangethapa 2s infinite;
+}
+
+@keyframes colorchangethapa {
+  0% {
+    color: violet;
+  }
+  20% {
+    color: indigo;
+  }
+  40% {
+    color: blue;
+  }
+  60% {
+    color: green;
+  }
+  80% {
+    color: yellow;
+  }
+  100% {
+    color: orangered;
+  }
+  120% {
+    color: red;
+  }
+}
+.sec{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  background: rgb(165, 118, 42);
+  overflow: hidden;
+  padding: 10px 20px;
+  box-sizing: border-box;
+
+}
+.sec::before{
+  content: '';
+  position: fixed;
+  top: 230px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: red;
+  clip-path: circle(65% at 100% -20%); 
+}
+
+
+.sec::after{
+  content: '';
+  position: fixed;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #47aafa;
+  clip-path: circle(35% at 0% 100%); 
+}
+.container{
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.container .card{
+  
+  position: relative;
+  width: 300px;
+  height: 500px;
+  margin: 20px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: rgb(255,255,255,0.05);
+  box-shadow:  0px 10px 25px rgba(0,0,0,0.2);
+  backdrop-filter:blur(15px);
+}
+.container .card .imgbx{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
+  transition: 0.5s ease-in-out;
+  
+}
+.container .card:hover .imgbx{
+  transform: translateY(-100px);
+
+  
+  
+}
+
+.container .card .imgbx img{
+  max-width: 1000px;
+  margin: 0px 0px 20px;
+  transition: 0.5s ease-in-out;
+}
+.container .card:hover .imgbx img{
+  transform: translate(-20px) rotate(-5deg) scale(1.4);
+}
+.container .card .imgbx h2{
+  color: #fff;
+  font-size: 1.3rem;
+
+}
+.container .card .content{
+  position:absolute;
+  bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: 0.5s ease-in-out;
+ opacity: 0;
+ visibility: hidden;
+
+}
+.container .card:hover .content{
+  opacity: 1;
+ visibility: visible;
+ transform: translateY(-40px);
+}
+.container .card .content .size input{
+  max-width: 100px;
+  border-radius: 35px;
+  padding: 10px 10px;
+  font-family: 'Love Ya Like A Sister', cursive;
+  font-size: 20px;
+  letter-spacing: 1px;
+  opacity: 1;
+  
+
+ 
+}
+
+.container .card .content .size,
+.container .card .content .color{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 20px;
+}
+.container .card .content .size h3,
+.container .card .content .color h3{
+  color: #fff;
+  font-size: 300;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-right: 10px;
+
+}
+.container .card .content .size span{
+  width: 46px;
+  height: 26px;
+  text-align: center;
+  line-height: 24px;
+  display: inline-block;
+  color: #000;
+  background: #fff;
+  border-radius: 4px;
+  margin: 0px 5px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: 0.5s;
+  cursor: pointer;
+
+}
+.container .card .content .size span:hover{
+  background: green;
+}
+.container .card .content .color span{
+  width: 20px;
+  height: 20px;
+  background: red;
+  border-radius: 50%;
+  margin: 0px 5px;
+  border:2px solid #fff;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.container .card .content .color span:nth-child(2){
+  background: #9bdc28;
+}
+.container .card .content .color span:nth-child(3){
+  background: #03a9f4;
+}
+.container .card .content .color span:nth-child(4){
+  background: #e91e63;
+}
+
+
+.container .card .content a{
+  position: relative;
+  top: 10px;
+  display: inline-block;
+  padding: 12px 30px;
+  background: #fff;
+  border-radius: 50px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #000;
+   text-decoration: none;
+
+}
+.container .card .content a:hover{
+  background: linear-gradient(to left, rgba(238, 5, 5, 0.979),rgb(232, 235, 50));
+}
+
+
+
+
+
+
+
+
+

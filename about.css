@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root{
+  --tran: all 0.5s linear;
+}
+html {
+  scroll-behavior: smooth;
+}
+#nav-design {
+  /* border : 10px solid red; */
+  border-top: 20px solid #464141;
+  border-bottom: 20px solid #464141;
+  margin: 0px;
+  padding: 24px;
+  font-size: 3.5rem;
+  display: flex;
+  background-color: black;
+  cursor: pointer;
+  opacity: 0.89;
+  z-index: -1;
+}
+
+#sec-nav {
+  padding: 10px;
+  margin: 0px;
+  font-size: 2.8rem;
+  padding: 0px;
+  /* background-color: #beab3cf3; */
+  border-bottom: 20px solid #574734;
+  background: rgb(165, 118, 42);
+}
+#sec-nav h1 {
+  font-size: 20px;
+  color: whitesmoke;
+  margin-bottom: 20px;
+  font-size: 4.3rem;
+  text-align: left;
+  font-family: "Hachi Maru Pop", cursive;
+  font-family: "Lobster", cursive;
+
+  /* font-family: 'Hachi Maru Pop', cursive; */
+}
+#nav-items ul {
+  text-align: center;
+  display: flex;
+  font-family: "Coda Caption", sans-serif;
+  font-family: "Potta One", cursive;
+}
+#nav-items ul li {
+  list-style: none;
+  font-size: 1.4rem;
+}
+#nav-items ul li a {
+  color: rgb(165, 118, 42);
+  display: block;
+  padding: 3px 22px;
+  border-radius: 20px;
+  text-decoration: none;
+}
+#nav-items ul li a:hover {
+  border-top: 5px solid blue;
+  border-bottom: 5px solid red;
+  color: red;
+  background-color: black;
+}
+#welcome h1 {
+  font-size: 2.8rem;
+  color: rgb(165, 118, 42);
+  margin-bottom: 20px;
+
+  text-align: center;
+  font-family: "Hachi Maru Pop", cursive;
+
+  /* font-family: 'Hachi Maru Pop', cursive; */
+}
+#welcome {
+  color: white;
+  font-size: 1.0rem;
+  margin-left: 0%;
+  margin-top: 0%;
+  font-size: 2.8rem;
+  background-color: rgb(34, 11, 2);
+  text-align: left;
+  font-family: "Potta One", cursive;
+  border-bottom: 20px solid  rgb(165, 118, 42);
+}
+.food h1{
+  font-size: 2.8rem;
+  background: brown;
+
+}
+/* slider */
+/* external css: flickity.css */
+
+* { box-sizing: border-box; }
+
+body { font-family: sans-serif; }
+
+.carousel {
+  background: rgb(235, 224, 224);
+}
+
+.carousel-cell {
+  width: 500px;
+  height: 300px;
+  margin-right: 10px;
+  background: rgb(242, 245, 242);
+  border-radius: 5px solid grey ;
+  counter-increment: gallery-cell;
+}
+
+/* cell number */
+/* .carousel-cell:before {
+  display: block;
+  text-align: center;
+  content: counter(gallery-cell);
+  line-height: 200px;
+  font-size: 80px;
+} */
+#new{
+
+  background: brown;
+}
+#new p{
+  color: white;
+  border-bottom: 20px solid grey ;
+   
+}
+#motto h1{
+  font-size: 2.3rem;
+  text-align: center;
+  background: rgb(0, 0, 0);
+color:  rgb(165, 118, 42);
+font-family: 'Alfa Slab One', cursive;
+
+}
+.main_div{
+  border-top: 20px solid grey ;
+  width: 100vw;
+  height: 120vh;
+  background-color: rgb(34, 11, 2);
+  display: grid;
+  place-items: center;
+
+}
+.main_div h1{
+ color: rgb(248, 240, 240);
+  font-size: 2.4rem;
+  font-family: 'Chewy', cursive;
+
+}
+.main_div p{
+  color: rgb(240, 48, 0);
+  font-size: 1.7rem;
+  font-family: "Potta One", cursive;
+  /* font-family: 'Alfa Slab One', cursive; */
+}
+.center_div{
+  
+  width: 35vw;
+  height: 90vh;
+  background-color:rgb(165, 118, 42);
+  position: relative;
+  overflow: hidden;
+ 
+
+}
+.center_div img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--tran);
+}
+.center_div .captions{
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: rgb(253, 242, 242);
+  font-size: 2.8rem;
+  background-color:rgba(0,0,0,0,0.5);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column-reverse;
+  align-items: center;
+  opacity: 1;
+  transition: var(--tran);
+}
+.center_div .captions h1{
+  text-transform: uppercase;
+  font-size: 2.9rem;
+  /* font-family: 'Kaushan Script', cursive; */
+   margin-top:20rem ;
+   transition: var(--tran);
+   color: rgb(0, 0, 0);
+   /* font-family: Georgia, 'Times New Roman', Times, serif; */
+
+}
+.center_div .captions p{
+  text-transform: capitalize;
+  font-family: 'Chewy', cursive;
+}
+.center_div:hover img{
+  transform: scale(1.3) rotate(10deg);
+
+}
+.center_div:hover caption{
+ opacity: 1;
+}
+.center_div:hover .captions h1{
+margin-top: 0;
+}
+@media(max-width:768px){
+  .center_div{
+      width: 90vw;
+      height: 80vh;
+  }
+}
+.center_div:hover img{
+  transform: scale(1.3) rotate(10deg);
+}

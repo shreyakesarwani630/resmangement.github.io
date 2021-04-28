@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Diplomata+SC&family=Love+Ya+Like+A+Sister&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
+}
+:root {
+  --tran: all 0.5s linear;
+}
+html {
+  scroll-behavior: smooth;
+}
+#nav-design {
+  /* border : 10px solid red; */
+  border-top: 20px solid #464141;
+  border-bottom: 20px solid #464141;
+  margin: 0px;
+  padding: 16px;
+  display: flex;
+  background-color: black;
+  cursor: pointer;
+
+  opacity: 0.89;
+  z-index: -1;
+}
+
+#sec-nav {
+  padding: 10px;
+  margin: 0px;
+  font-size: 2.8rem;
+  padding: 0px;
+  /* background-color: #beab3cf3; */
+  border-bottom: 20px solid #574734;
+  background: rgb(165, 118, 42);
+}
+#sec-nav h1 {
+  font-size: 20px;
+  color: whitesmoke;
+  margin-bottom: 20px;
+  font-size: 4.3rem;
+  text-align: left;
+  font-family: "Hachi Maru Pop", cursive;
+  font-family: "Lobster", cursive;
+
+  /* font-family: 'Hachi Maru Pop', cursive; */
+}
+.info {
+  font-size: 1.3rem;
+  margin-left: 5%;
+  margin-top: 0%;
+  font-size: 2.8rem;
+  text-align: left;
+  font-family: "Potta One", cursive;
+}
+.info a {
+  background: black;
+  padding: 10px 18px;
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  margin: 30px 0px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.info a:hover {
+  background: red;
+}
+
+/* #img{
+    height: 100%;
+    position: relative;
+   align-self: start;
+  
+  } */
+#nav-items ul {
+  text-align: center;
+  display: flex;
+  font-family: "Coda Caption", sans-serif;
+  font-family: "Potta One", cursive;
+  position: sticky;
+}
+#nav-items ul li {
+  list-style: none;
+  font-size: 1.4rem;
+}
+#nav-items ul li a {
+  color: rgb(165, 118, 42);
+  display: block;
+  padding: 3px 22px;
+  border-radius: 20px;
+  text-decoration: none;
+}
+#nav-items ul li a:hover {
+  border-top: 5px solid blue;
+  border-bottom: 5px solid red;
+  color: red;
+  background-color: black;
+}
+
+/* color change */
+
+.colorchange {
+  animation: colorchangethapa 2s infinite;
+}
+
+@keyframes colorchangethapa {
+  0% {
+    color: violet;
+  }
+  20% {
+    color: indigo;
+  }
+  40% {
+    color: blue;
+  }
+  60% {
+    color: green;
+  }
+  80% {
+    color: yellow;
+  }
+  100% {
+    color: orangered;
+  }
+  120% {
+    color: red;
+  }
+}
+section{
+    overflow: hidden;
+
+}
+#sec{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    min-height: 100vh;
+    /* background: linear-gradient(to bottom,#f1f4f9,#dff1ff); */
+    /* background: linear-gradient(to bottom,#181402,  rgb(165, 118, 42)); */
+   background: black;
+}
+#sec .color{
+    position: absolute;
+    filter: blur(50px);
+
+}
+/* #sec .color:nth-child(1){
+    top: -150px;
+    width: 800px;
+    height: 600px;
+    background: #ff359b;
+}
+#sec .color:nth-child(2){
+    bottom: -10px;
+    left: 100px;
+    width: 500px;
+    height: 800px;
+    background: #fffd87;
+}
+#sec .color:nth-child(3){
+    bottom: -300px;
+    right: 100px;
+    width: 500px;
+    height: 500px;
+    background: #00d2ff;
+} */
+
+.box{
+    position: relative;
+    justify-content: center;
+    /* background: rgb(168, 161, 161); */
+}
+.box .square{
+    position:absolute;
+   
+    backdrop-filter: blur(5px);
+    box-shadow: 0 25px 45px rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.5);
+    border: 1px solid rgba(255,255,255,0.2);
+    border: 1px solid rgba(255,255,255,0.2);
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    animation: animate 10s linear infinite;
+   animation-delay:calc(-1s*var(--i)) ;
+}
+@keyframes animate{
+    0%,100%{
+        transform: translate(-40px);
+    }
+    50%{
+        transform: translate(40px);
+    }
+}
+.box .square:nth-child(1){
+    top: -50px;
+    right: -60px;
+    width: 100px;
+    height: 100px;
+}
+.box .square:nth-child(2){
+    top: 150px;
+    left: -100px;
+    width: 120px;
+    height: 120px;
+    z-index: 2;
+}
+.box .square:nth-child(3){
+    bottom: 50px;
+    right: -60px;
+    width: 80px;
+    height: 80px;
+    z-index: 2;
+}
+.box .square:nth-child(4){
+    bottom: -80px;
+    left: 100px;
+    width: 50px;
+    height: 50px;
+    
+}
+.box .square:nth-child(5){
+    top: -80px;
+    left: 140px;
+    width: 60px;
+    height: 60px;
+    
+}
+.container{
+    position: relative;
+    width: 500px;
+    min-height: 400px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    box-shadow: 0px 25px 45px rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.5);
+    border: 1px solid rgba(255,255,255,0.2);
+    border: 1px solid rgba(255,255,255,0.2);
+
+}
+.form{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+}
+.form h2{
+    position: relative;
+    color: #fff;
+    /* color: rgb(122, 21, 21); */
+    font-size: 1.9rem;
+    font-weight: 600;
+    font-family: 'Diplomata SC', cursive;
+
+
+    
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+}
+.form h2::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 80px;
+    height: 4px;
+    background: rgb(170, 129, 53);
+}
+.form .inputBox{
+    width: 100%;
+    margin-top: 20px;
+
+}
+.form .inputBox input{
+    width: 80%;
+    background: rgba(255,255,255,0.2);
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    font-family: 'Love Ya Like A Sister', cursive;
+    border-radius: 35px;
+    border: 1px solid rgba(255,255,255,0.5);
+    border: 1px solid rgba(255,255,255,0.2);
+    border: 1px solid rgba(255,255,255, 0.2);
+    font-size: 17px;
+    letter-spacing: 1px;
+    opacity: 1;
+    color: red;
+    box-shadow: 0 5px 15px rgba(255,255,255,0.5);
+    
+    
+}
+.form .inputBox input::placeholder{
+    
+    color: black;
+    font-size: 0.4rem;
+    
+    
+}
+
+/* .form .inputBox input::placeholder{
+
+    color: #fff;
+} */
+.form .inputBox input[type="submit"]{
+    /* background: #fff;
+
+    color: rgb(218, 60, 60); */
+    
+    max-width: 100px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    font-weight: 600;
+    transition: 0.5s;
+   
+}
+
+.form .inputBox input[type="submit"]:hover{
+    /* transition: 0.5s; */
+    background: linear-gradient(to left, rgba(223, 117, 205, 0.979),rgb(221, 86, 86));
+
+}
+.forget{
+    margin-top: 5px;
+    color: rgb(3, 2, 2);
+}
+.forget a{
+    color: rgb(251, 135, 2);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
